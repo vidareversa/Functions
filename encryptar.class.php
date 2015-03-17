@@ -37,6 +37,7 @@ class Contenido
 $cont = new Contenido();
 $encriptado = $cont->encriptar("este es mi pass", "keypass");
 var_dump($encriptado);
+echo "---principio---";
 die;
 
 $time = date("G:i:s");
