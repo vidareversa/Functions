@@ -1,15 +1,3 @@
-Log.php
-DETAILS
-ACTIVITY
-Today
-
-You uploaded an item
-9:13 pm
-Unknown File
-Log.php
-No recorded activity before 18 May 2017
-All selections cleared All selections cleared All selections cleared All selections cleared All selections cleared All selections cleared
-
 <?php
 class Log
 {
