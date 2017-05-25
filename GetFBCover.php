@@ -1,5 +1,10 @@
 <?php
 
+/* 
+   Editado: Parece que facebook cambió las politicas de seguridad 
+   y ahora pide un token para obtener la data
+*/
+
 /**************************************/
 $fotos = array();
 //Obtener datos de facebook
