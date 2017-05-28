@@ -41,3 +41,7 @@ class PDOConfig extends PDO
     public function getDebug() {
         return $this->debug;
     }
+    
+    public function limpiarVars($var) {
+        return addslashes(htmlentities($var));    
+    }
