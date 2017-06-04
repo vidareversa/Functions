@@ -33,6 +33,23 @@ class PDOConfig extends PDO
         }else
             return $resultado;
     }
+    
+    public function queryToArray($sql) {
+        if ($this->debug) {
+            echo "Consulta a ejecutar: /** " . $sql . ' **/ <br />';
+        }
+        $sth = parent::prepare($sql);
+        $sth->execute();
+        $resultado = $sth->fetchAll(PDO::FETCH_ASSOC);        
+        if (!$resultado) {
+            if ($this->debug) {
+                print_r($this->errorInfo());
+            }
+            return false;
+        } else {
+            return $resultado;
+        }
+    }
 
     public function setDebug($debug) {
         $this->debug = $debug;
