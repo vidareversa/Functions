@@ -48,6 +48,7 @@ class Scrap
         $libNum = 1;
         $tr = true;
         
+        
         $combinations = 0;
         for($i=1;$i<=$maxLength;$i++){
             $combinations += pow($size,$i);
