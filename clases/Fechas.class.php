@@ -1,11 +1,15 @@
 <?php
+
+/* *******************************************
+ *           ---- Acerca De ---- 			  *	
+   1- Licencia: GPL  
+   2- Autor: Facundo Giardino
+   3- Año 2013
+ ******************************************* */
+
 class TipoFecha
 {
-     /* *******************************************
-  	 *           ---- Acerca De ---- 			  *	
-	   1- Licencia: GPL  
-	   2- Autor: Facundo Giardino
-	 ******************************************* */
+     
 
 	 //formatea una fecha para un formato de insercion en la base de datos ('Y-m-d') 
 	 public static function formatearFechaParaDb($fecha)
