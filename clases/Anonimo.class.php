@@ -23,5 +23,5 @@ class Encrypt {
 /********* Ejemplo (tiene que estar Tor corriendo, probado en linux) *********/
 $crypt = new Encrypt();
 $url = "https://check.torproject.org/";
-$data = //array('DNI' => 'xxxx');
+$data = "";//array('DNI' => 'xxxx');
 $crypt->proxy();
