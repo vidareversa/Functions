@@ -45,10 +45,8 @@ class Login
     /* *************************************************
      * Valida que hay una sesion iniciada y es correcta
      *************************************************** */
-    public function validar() 
-	{
-        if (isset($_SESSION['nombreUsuario'])) 
-        {
+    public function validar() {
+        if (isset($_SESSION['nombreUsuario'])) {
             $nombreUsuario = $_SESSION['nombreUsuario'];
         } 
         else 
