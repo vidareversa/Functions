@@ -76,17 +76,13 @@ class TipoFecha
 	 
 	 
 	 //Calcula la cantidad de dias entre 2 fechas
-     public function diasEntreDosFechas($fecha1, $fecha2) 
-	 { 
-       if($fecha1 != NULL && !empty($fecha1) && $fecha2 != NULL && !empty($fecha2))
-	   {
-	  	 return floor(abs(strtotime($fecha1) - strtotime($fecha2))/86400); //dividido en 86400 (cant de segundos por dia) para que de la cantidad de dias (funciona?)
-	   }
-   	   else
-	   {
+     public function diasEntreDosFechas($fecha1, $fecha2) { 
+	if($fecha1 != NULL && !empty($fecha1) && $fecha2 != NULL && !empty($fecha2)) {
+		return floor(abs(strtotime($fecha1) - strtotime($fecha2))/86400); //dividido en 86400 (cant de segundos por dia) para que de la cantidad de dias (funciona?)
+        } else {
 	    	return "";
-	   }
-	 } 		
+	}
+     } 		
 	 
 }
 
