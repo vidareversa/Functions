@@ -62,3 +62,4 @@ class PDOConfig extends PDO
     public function limpiarVars($var) {
         return addslashes(htmlentities($var));    
     }
+}
