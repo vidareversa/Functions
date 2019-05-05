@@ -1,2 +1,1 @@
-# encrypt
-Clases varias de PHP. 
+# Clases varias de PHP. 
