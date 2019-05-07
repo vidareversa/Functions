@@ -8,24 +8,24 @@
 /**************************************/
 $fotos = array();
 //Obtener datos de facebook
-for($i=0; $i<500; $i++){
-    $foto = @file_get_contents("https://graph.facebook.com/".$i."?fields=cover");
-    if(!empty($foto)){        
-        $objFoto = json_decode($foto);        
-        if(is_object($objFoto)){            
-            $propiedades = get_object_vars($objFoto);                        
-            if(!empty($objFoto->cover))
-                if(!empty($objFoto->cover->source))
-                    $fotos [] = $objFoto->cover;
+for ($i = 0; $i < 500; $i++) {
+    $foto = @file_get_contents("https://graph.facebook.com/" . $i . "?fields=cover");
+    if (!empty($foto)) {
+        $objFoto = json_decode($foto);
+        if (is_object($objFoto)) {
+            $propiedades = get_object_vars($objFoto);
+            if (!empty($objFoto->cover))
+                if (!empty($objFoto->cover->source))
+                    $fotos[] = $objFoto->cover;
         }
-    }        
+    }
 }
 
 echo "<div style='margin:0px auto;'>";
 $i = 0;
-foreach($fotos as $foto){    
-    if(is_object($foto))
-        echo "<img src='".$foto->source."' height='100' width='100' align='left' />";            
+foreach ($fotos as $foto) {
+    if (is_object($foto))
+        echo "<img src='" . $foto->source . "' height='100' width='100' align='left' />";
 }
 echo "</div>";
 

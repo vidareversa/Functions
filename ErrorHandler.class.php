@@ -14,8 +14,7 @@ class ErrorHandler
             return;
         }
         */
-        switch ($errno)
-        {
+        switch ($errno) {
             case E_USER_ERROR:
                 echo "<b>ERROR</b> [$errno] $errstr<br />\n";
                 echo "  Fatal error on line $errline in file $errfile";
@@ -36,7 +35,7 @@ class ErrorHandler
                 echo "<b>UNKNOWN ERROR</b> [$errno] $errstr<br />\n";
                 break;
         }
-        
+
         return true;
     }
 }

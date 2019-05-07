@@ -1,28 +1,33 @@
 <?php
 
 class Contenido
-{        
+{
     protected $id;
     protected $texto;
-    
-    public function __construct() {
 
+    public function __construct()
+    { 
+        
     }
 
-    public function getContenido() {
-    	return $this->contenido;
+    public function getContenido()
+    {
+        return $this->contenido;
     }
 
-    public function setContenido($contenido) {    	
-    	$this->contenido = $contenido;
-    }
-   
-    public function encriptar($data, $key = "key") {       
-       $opensslentrypt = openssl_encrypt($data, "aes-256-ofb", $key);
-       return $opensslentrypt;
+    public function setContenido($contenido)
+    {
+        $this->contenido = $contenido;
     }
 
-    public function comprimir($data) {
+    public function encriptar($data, $key = "key")
+    {
+        $opensslentrypt = openssl_encrypt($data, "aes-256-ofb", $key);
+        return $opensslentrypt;
+    }
+
+    public function comprimir($data)
+    { 
 
     }
 }

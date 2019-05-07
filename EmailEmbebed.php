@@ -5,7 +5,7 @@ require_once 'PHPMailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host       = 'smtp.gmail.com';
-$mail->SMTPAuth   = true;                
+$mail->SMTPAuth   = true;
 $mail->Username   = 'example@example.com';
 $mail->Password   = '**********';
 $mail->SMTPSecure = 'tls';
@@ -31,10 +31,6 @@ $mail->AddEmbeddedImage($imagen4, 'avion');
 $mail->isHTML(true);
 $mail->Subject = 'Enviando';
 
-/*
-$body = file_get_contents($template);
-$body = eregi_replace("[\]",'',$body);
-*/
 $mail->Body = "<b>Imagen: </b> <h3 align='center'>Titulo: </h3>
     <img alt='(no puede mostrar la imagen)' src='cid:avion' height='430' width='700' style='width:700px;height:430px;' />
     <table border='1' style='border:1px solid black;'>    
@@ -46,7 +42,7 @@ $mail->Body = "<b>Imagen: </b> <h3 align='center'>Titulo: </h3>
     </table>";
 
 $mail->AltBody = 'Body alternativo';
-if(!$mail->send()) {
+if (!$mail->send()) {
     echo 'Error al enviar mensaje';
     echo 'PHPMailer Error: ' . $mail->ErrorInfo;
 } else {
